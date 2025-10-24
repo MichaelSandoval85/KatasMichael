@@ -31,8 +31,6 @@ public class CalculadoraDeCadenas
     }
     private int ValidarCadena(string cadena)
     {
-        if (cadena == "")
-            return 0;
-        return  int.Parse(cadena);
+        return cadena == "" ? 0 : int.Parse(cadena);
     }
 }
