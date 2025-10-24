@@ -44,6 +44,7 @@ public class CalculadoraDeCadenas
     }
     private object ValidarCadena(string cadena)
     {
-        return cadena == "" ? 0 : int.Parse(cadena);
+        return cadena == "" ? 0 :
+            int.Parse(cadena) < 0 ? "No se pueden insertar numeros negativos" : int.Parse(cadena);
     }
 }
