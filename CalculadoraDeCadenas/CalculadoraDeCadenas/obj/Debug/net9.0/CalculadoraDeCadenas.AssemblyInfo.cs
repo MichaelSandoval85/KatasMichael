@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalculadoraDeCadenas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9240fc6590dfed424138e86b9d14d00a39c9afce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1631417f467c27f4a8eeee2822c08ee64142985b")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalculadoraDeCadenas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalculadoraDeCadenas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

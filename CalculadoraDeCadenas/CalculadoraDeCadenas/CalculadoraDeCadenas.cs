@@ -11,7 +11,7 @@ public class CalculadoraDeCadenas
         string cadena = "";
         
         //Act
-        int resultado = ValidarCadena(cadena);
+        var resultado = ValidarCadena(cadena);
         
         //Assert
         resultado.Should().Be(0);
@@ -24,12 +24,25 @@ public class CalculadoraDeCadenas
         string cadena = "6";
         
         //Act
-        int  resultado = ValidarCadena(cadena);
+        var  resultado = ValidarCadena(cadena);
         
         //Assert
         resultado.Should().Be(6);
     }
-    private int ValidarCadena(string cadena)
+
+    [Fact]
+    public void Si_Envio_Numeros_Negativos_Retornar_Mensaje_Error()
+    {
+        //Arrange
+        string cadena = "-6";
+        
+        //Act
+        var  resultado = ValidarCadena(cadena);
+        
+        //Assert
+        resultado.Should().Be("No se pueden insertar numeros negativos");
+    }
+    private object ValidarCadena(string cadena)
     {
         return cadena == "" ? 0 : int.Parse(cadena);
     }
