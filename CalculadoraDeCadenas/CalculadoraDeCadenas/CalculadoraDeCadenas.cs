@@ -16,9 +16,9 @@ public class CalculadoraDeCadenas
         //Assert
         resultado.Should().Be(0);
     }
-
+    
     private int ValidarCadena(string cadena)
     {
-        throw new NotImplementedException();
+        return 0 ;
     }
 }

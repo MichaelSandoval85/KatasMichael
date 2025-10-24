@@ -97,3 +97,4 @@ C:\FuentesNET3.0\Cursos\TDD\KatasMichael\CalculadoraDeCadenas\CalculadoraDeCaden
 C:\FuentesNET3.0\Cursos\TDD\KatasMichael\CalculadoraDeCadenas\CalculadoraDeCadenas\obj\Debug\net9.0\CalculadoraDeCadenas.pdb
 C:\FuentesNET3.0\Cursos\TDD\KatasMichael\CalculadoraDeCadenas\CalculadoraDeCadenas\obj\Debug\net9.0\CalculadoraDeCadenas.genruntimeconfig.cache
 C:\FuentesNET3.0\Cursos\TDD\KatasMichael\CalculadoraDeCadenas\CalculadoraDeCadenas\obj\Debug\net9.0\ref\CalculadoraDeCadenas.dll
+C:\FuentesNET3.0\Cursos\TDD\KatasMichael\CalculadoraDeCadenas\CalculadoraDeCadenas\obj\Debug\net9.0\CalculadoraDeCadenas.sourcelink.json
