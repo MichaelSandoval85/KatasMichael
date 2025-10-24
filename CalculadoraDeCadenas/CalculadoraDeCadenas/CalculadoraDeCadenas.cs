@@ -42,9 +42,22 @@ public class CalculadoraDeCadenas
         //Assert
         resultado.Should().Be("No se pueden insertar numeros negativos");
     }
-    private object ValidarCadena(string cadena)
+    
+    [Fact]
+    public void Si_Envio_Una_Cadena_De_Numeros_Deben_Sumarse()
+    {
+        //Arrange
+        string [] cadena = ["1,2,3,4"];
+        
+        //Act
+        var  resultado = ValidarCadena(cadena);
+        
+        //Assert
+        resultado.Should().Be(10);
+    }
+    private object ValidarCadena(object cadena)
     {
         return cadena == "" ? 0 :
-            int.Parse(cadena) < 0 ? "No se pueden insertar numeros negativos" : int.Parse(cadena);
+            Convert.ToInt32(cadena) < 0 ? "No se pueden insertar numeros negativos" : Convert.ToInt32(cadena);
     }
 }
