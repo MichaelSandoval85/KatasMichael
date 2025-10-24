@@ -47,16 +47,32 @@ public class CalculadoraDeCadenas
     public void Si_Envio_Una_Cadena_De_Numeros_Deben_Sumarse()
     {
         //Arrange
-        string [] cadena = ["1,2,3,4"];
-        
+        string cadena = "1,2,3,4";
+
         //Act
         var  resultado = ValidarCadena(cadena);
-        
+
         //Assert
         resultado.Should().Be(10);
     }
-    private object ValidarCadena(object cadena)
+    private object ValidarCadena(string cadena)
     {
+        if (cadena.Contains(","))
+        {
+            string[] numeros = cadena.Split(',');
+            int suma = 0;
+
+            foreach (string numero in numeros)
+            {
+                int valor = Convert.ToInt32(numero);
+                if (valor < 0)
+                    return "No se pueden insertar numeros negativos";
+                suma += valor;
+            }
+
+            return suma;
+        }
+        
         return cadena == "" ? 0 :
             Convert.ToInt32(cadena) < 0 ? "No se pueden insertar numeros negativos" : Convert.ToInt32(cadena);
     }
