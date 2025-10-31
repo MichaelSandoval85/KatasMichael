@@ -1,0 +1,8 @@
+aceptar dos números enteros y los convierta a una puntuación al estilo del tenis.
+
+Las reglas de puntuación del tenis (según Wikipedia ) son las siguientes: 
+
+* Gana una partida el primer jugador que haya conseguido al menos cuatro puntos en total y al menos dos puntos más que su oponente.
+* Las puntuaciones de cero a tres puntos se describen como “uno”, “quince”, “treinta” y “cuarenta” respectivamente.
+* Si cada jugador ha anotado al menos tres puntos y los puntajes son iguales, el puntaje es “deuce”.
+* Si cada jugador ha anotado al menos tres puntos y un jugador tiene un punto más que su oponente, el marcador es de “ventaja” para el jugador que va en cabeza.

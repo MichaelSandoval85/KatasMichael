@@ -5,20 +5,20 @@ namespace Tenis;
 public class Tenis
 {
     [Fact]
-    public void Envio_2_Numeros_Enteros_Devuelve_2_Numeros_Enteros()
+    public void Envio_Puntaje_Jugador_1_Y_Puntaje_Jugador_2_Enteros()
     {
         //Arrange
-        var numero1 = 1;
-        var numero2 = 2;
+        int puntosJugador1 = 1;
+        int puntosJugador2 = 2;
         
         //Act
-        var resultado = ValidarPuntaje(numero1,numero2);
+        var resultado = ValidarPuntaje(puntosJugador1,puntosJugador2);
         
         //Assert
         resultado.Should().Be((1,2));
     }
 
-    private object ValidarPuntaje(int numero1, int numero2)
+    private object ValidarPuntaje(int puntosJugador1, int puntosJugador2)
     {
         return (1,2);
     }
