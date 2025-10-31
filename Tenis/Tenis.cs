@@ -8,38 +8,41 @@ public class Tenis
     public void Envio_Puntaje_Jugador_1_Y_Puntaje_Jugador_2_Enteros()
     {
         //Arrange
-        int puntosJugador1 = 1;
-        int puntosJugador2 = 2;
+        string puntosJugador1 = "1";
+        string puntosJugador2 = "2";
         
         //Act
         var resultado = ValidarPuntaje(puntosJugador1,puntosJugador2);
         
         //Assert
-        resultado.Should().Be((1,2));
+        resultado.Should().Be(("1","2"));
     }
 
     [Fact]
     public void Gana_El_Primer_Jugador_Que_Tenga_Minimo_4_Puntos_Y_2_Puntos_Adicionales_A_Los_Del_Oponente()
     {
         //Arrange
-        int puntosJugador1 = 4;
-        int puntosJugador2 = 6;
+        string puntosJugador1 = "4";
+        string puntosJugador2 = "6";
         
         //Act
         var resultado = ValidarPuntaje(puntosJugador1, puntosJugador2);
         
         //Assert
-        resultado.Should().Be((4,6));
+        resultado.Should().Be(("Jugador 2","6"));
     }
     
-    private object ValidarPuntaje(int puntosJugador1, int puntosJugador2)
+    private object ValidarPuntaje(string puntosJugador1, string puntosJugador2)
     {
-        if (puntosJugador1 >= 4 && (puntosJugador1 - puntosJugador2) >= 2)
-            return (puntosJugador1, puntosJugador2);
+        int jugador1Puntos = int.Parse(puntosJugador1);
+        int jugador2Puntos = int.Parse(puntosJugador2);
         
-        if (puntosJugador2 >= 4 && (puntosJugador2 - puntosJugador1) >= 2)
-            return (puntosJugador1, puntosJugador2);
+        if (jugador1Puntos >= 4 && (jugador1Puntos - jugador2Puntos) >= 2)
+            return ("Jugador 1", jugador2Puntos.ToString());
         
-        return (1,2);
+        if (jugador2Puntos >= 4 && (jugador2Puntos - jugador1Puntos) >= 2)
+            return ("Jugador 2", jugador2Puntos.ToString());
+
+        return ("1","2"); 
     }
 }
