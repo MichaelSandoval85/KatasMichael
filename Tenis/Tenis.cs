@@ -50,8 +50,8 @@ public class Tenis
     public void Envio_Puntaje_De_Dos_Jugadores_Si_Los_Dos_Puntajes_Son_De_Almenos_3_Puntos_Y_Son_Iguales_Retorno_Deuce()
     {
         //Arrange
-        string puntosJugador1 = "2";
-        string puntosJugador2 = "5";
+        string puntosJugador1 = "3";
+        string puntosJugador2 = "3";
         //Act
         var resultado = ValidarPuntaje(puntosJugador1, puntosJugador2);
         //Assert
