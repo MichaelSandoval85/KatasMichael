@@ -63,7 +63,7 @@ public class Tenis
     {
         //Arrange
         string puntosJugador1 = "3";
-        string puntosJugador2 = "3";
+        string puntosJugador2 = "4";
         //Act
         var resultado = ValidarPuntaje(puntosJugador1, puntosJugador2);
         //Assert
