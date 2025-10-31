@@ -23,13 +23,13 @@ public class Tenis
     {
         //Arrange
         int puntosJugador1 = 4;
-        int puntosJugador2 = 3;
+        int puntosJugador2 = 6;
         
         //Act
         var resultado = ValidarPuntaje(puntosJugador1, puntosJugador2);
         
         //Assert
-        resultado.Should().Be((6,4));
+        resultado.Should().Be((4,6));
     }
     
     private object ValidarPuntaje(int puntosJugador1, int puntosJugador2)
