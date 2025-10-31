@@ -20,7 +20,6 @@ public class Tenis
 
     private object ValidarPuntaje(int numero1, int numero2)
     {
-        //return (1,2);
-        throw new NotImplementedException();
+        return (1,2);
     }
 }
