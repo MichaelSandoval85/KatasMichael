@@ -69,7 +69,6 @@ public class Tenis
         //Assert
         resultado.Should().BeEquivalentTo(("Ventaja Jugador", "2"));
     }
-
     
     private object ValidarPuntaje(string puntosJugador1, string puntosJugador2)
     {
