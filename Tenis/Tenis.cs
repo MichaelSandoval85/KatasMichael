@@ -45,6 +45,18 @@ public class Tenis
         //Assert
         resultado.Should().BeEquivalentTo(("Jugador 1 Love", "Jugador 2 Thirty"));
     }
+
+    [Fact]
+    public void Envio_Puntaje_De_Dos_Jugadores_Si_Los_Dos_Puntajes_Son_De_Almenos_3_Puntos_Y_Son_Iguales_Retorno_Deuce()
+    {
+        //Arrange
+        string puntosJugador1 = "2";
+        string puntosJugador2 = "5";
+        //Act
+        var resultado = ValidarPuntaje(puntosJugador1, puntosJugador2);
+        //Assert
+        resultado.Should().BeEquivalentTo(("Resultado", "Deuce"));
+    }
     private object ValidarPuntaje(string puntosJugador1, string puntosJugador2)
     {
         int jugador1Puntos = int.Parse(puntosJugador1);
@@ -56,6 +68,9 @@ public class Tenis
         if (jugador2Puntos >= 4 && (jugador2Puntos - jugador1Puntos) >= 2)
             return ("Ganador Jugador2", ConvertirPuntos(puntosJugador2));
 
+        if(jugador1Puntos >= 3 && jugador2Puntos >= 3)
+            if (jugador1Puntos == jugador2Puntos)
+                return ("Resultado","Deuce");
         
         if (jugador1Puntos <= 3 || jugador2Puntos <= 3)
             return ("Jugador 1 " +  ConvertirPuntos(puntosJugador1), "Jugador 2 " + ConvertirPuntos(puntosJugador2));
